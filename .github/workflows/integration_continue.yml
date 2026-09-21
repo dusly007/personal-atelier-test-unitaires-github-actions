@@ -1,0 +1,36 @@
+
+#On commence par fournir un nom
+name: Compilation du projet atelier-test-unitaire
+
+#spécifie à quel moment le workflow doit s'exécuter
+on:
+    push:
+
+#création de nos jobs
+jobs: 
+    compilation: #Nom du premier job qui s'éxecute sur un runner ubuntu
+        runs-on: ubuntu-latest
+        steps:
+            -name: Checkout repository
+             uses: actions/checkout@v5
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
