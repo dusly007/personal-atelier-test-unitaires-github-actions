@@ -11,8 +11,18 @@ jobs:
     compilation: #Nom du premier job qui s'éxecute sur un runner ubuntu
         runs-on: ubuntu-latest
         steps:
-            -name: Checkout repository
-             uses: actions/checkout@v5
+            - name: Checkout repository
+              uses: actions/checkout@v5
+            - name: Set up JDK 25
+              uses: actions/setup-java@v5
+              with:                          # ...paramétrée par des entrées (`with:`)
+                java-version: '21'
+                distribution: 'temurin'
+            - name: Ajouter droit pour la compilation
+              run: chmod +x mvnw    
+            - name: Compile le projet
+              run: ./mvnw compile
+     
                 
                 
 
