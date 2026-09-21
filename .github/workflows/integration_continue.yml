@@ -22,7 +22,7 @@ jobs:
             - name: Ajouter droit pour la compilation
               run: chmod +x mvnw    
             - name: Compile le projet
-              run: ./mvnw test -Dtest=additionnerDeuxNombresPositifs+soustraireDonneLaDifference
+              run: ./mvnw test -Dtest=CalculatriceTest#additionnerDeuxNombresPositifs+soustraireDonneLaDifference
      
                 
                 
