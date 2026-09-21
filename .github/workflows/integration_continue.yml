@@ -5,6 +5,7 @@ name: Compilation du projet atelier-test-unitaire
 #spécifie à quel moment le workflow doit s'exécuter
 on:
     push:
+    workflow_dispatch: #permet de déclencher le workflow manuellement depuis l'interface GitHub
 
 #création de nos jobs
 jobs: 
@@ -21,7 +22,7 @@ jobs:
             - name: Ajouter droit pour la compilation
               run: chmod +x mvnw    
             - name: Compile le projet
-              run: ./mvnw compile
+              run: ./mvnw test -Dtest=additionnerDeuxNombresPositifs+soustraireDonneLaDifference
      
                 
                 

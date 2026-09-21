@@ -68,8 +68,14 @@ class CalculatriceTest {
     @Test
     void multiplierDeuxNombres() {
         // TODO: Arrange - Act - Assert
+        int a = 4;
+        int b = 5;
+
+        int resultat = calculatrice.multiplier(a, b);
+
+        assertEquals(20, resultat, "La multiplication de 4 et 5 devrait être 20");
         // Vérifiez que multiplier(4, 5) retourne 20
-        fail("Test à compléter");
+        //fail("Test à compléter");
     }
 
     @Test
